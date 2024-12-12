@@ -1,0 +1,91 @@
+/* Generel styling */
+body, html {
+    margin: 0;
+    padding: 0;
+   font-family: "HelveticaNeue-CondensedBold", 'Arial', sans-serif;
+    overflow-x: hidden;
+    color: white;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to bottom, #0077b6, #001d3d);
+    transition: background-color 0.3s ease;
+}
+
+main {
+    text-align: center;
+    padding: 15rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.intro {
+    padding: 15rem 0;
+}
+
+.intro h1 {
+    font-size: 4rem; /* Gør teksten større */
+    margin-bottom: 2rem;
+    color: black;
+}
+
+.intro p {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.advice {
+    padding: 2rem 0;
+    background-color: #00274d;
+}
+
+.tips-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.tip {
+    background-color: #004a71;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    flex: 1 1 calc(30% - 1rem);
+    text-align: center;
+}
+
+/* Animerede elementer */
+.fish, .plastic, .coral {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+/* Animationer */
+@keyframes swim {
+    0% { transform: translateX(-10%); }
+    50% { transform: translateX(100vw) translateY(10px); }
+    100% { transform: translateX(-10%); }
+}
+
+@keyframes float-sideways {
+    0% { transform: translate(-5%, 0); }
+    50% { transform: translate(5%, -20px); }
+    100% { transform: translate(-5%, 0); }
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
